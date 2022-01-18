@@ -1,0 +1,5 @@
+ParentPage       ------------   GooglePage  -------------
+Page Factory                                             |
+                                                         | ---- WebElements
+                                                         |
+ParentTest  -----------------   GoogleTest --------------
