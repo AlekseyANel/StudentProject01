@@ -2,9 +2,10 @@ package libs;
 
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+
 //Эта библиотека для работы с вебэлементами на любой странице с логированием и
 //предусмотрели возможность ошибки
 //Например: - ввод текста в любое поле; - кликнуть на кликабельный элемент;

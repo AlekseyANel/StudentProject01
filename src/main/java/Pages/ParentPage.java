@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-//Родительский класс, всё общее для любой из страниц страниц
+//Родительский класс, всё общее для любой из страниц
 public class ParentPage {
     WebDriver webDriver;
     Logger logger;
@@ -20,15 +20,14 @@ public class ParentPage {
     }
 /**
  * Method opens url
- * @param url
  */
-public void open(String url) {
+public void open (String url) {
     try {
         webDriver.get(url);
-        logger.info("Page has opened" + url);
+        logger.info("Page has opened " + url);
     } catch (Exception e) {// При негативе тест останавливаем и пишем в логгах
-        logger.error("Page can't opened" + url);
-        Assert.fail("Page can't opened" + url);
+        logger.error("Page can't opened " + url);
+        Assert.fail("Page can't opened " + url);
     }
 }
 }

@@ -3,3 +3,7 @@ Page Factory                                             |
                                                          | ---- WebElements
                                                          |
 ParentTest  -----------------   GoogleTest --------------
+                                                         |
+ParentTestSelenide ---------- GoogleTestSelenide --------|
+
+
