@@ -1,7 +1,8 @@
 package APItest;
 
 import io.restassured.response.Response;
-import org.junit.Test;
+import org.testng.annotations.Test;
+
 
 import static io.restassured.RestAssured.given;
 
@@ -53,10 +54,11 @@ public class ApiTest {
                 .extract().response();
         String name = response.jsonPath().get("name").toString();
         //вытянуль из респонса, преобразовали в json, получили значение по ключу "name"
-        // и отбразили его стингой
+        // и отобразили его стрингой
         String homeWorld = response.jsonPath().get("homeworld").toString();
         System.out.println("\n" + name + "\n" + homeWorld);
         // "\n" - с новой строки
+        //.extract().JsonPath() – метод для получения значений из ответа
     }
     @Test
     public void getNamePlanetAndPopulation() {

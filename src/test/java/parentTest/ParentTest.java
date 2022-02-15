@@ -4,12 +4,15 @@ import Pages.GooglePage;
 
 import Pages.LoginPage;
 
-import org.junit.After;
-import org.junit.Before;
+
 
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
 import java.io.File;
 
@@ -31,7 +34,7 @@ public class ParentTest {
 
     }
 
-    @Before
+    @BeforeClass
     public void setUp() {
 
         File fileChromeDriver = new File ("chromedriver.exe");
@@ -56,7 +59,7 @@ public class ParentTest {
 
 
     }
-    @After
+    @AfterClass
     public void tearDown() {
         //закрывает только вкладку вебДрайвера
         //webDriver.close();

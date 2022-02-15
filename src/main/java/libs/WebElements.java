@@ -44,7 +44,7 @@ public class WebElements {
     //Метод проверки наличия требуемого вебэлемента на странице
     public boolean isElementPresent(WebElement webElement) {
         try {
-            return webElement.isDisplayed();
+            return webElement.isEnabled();
         } catch (Exception e) {
             return false;
         }

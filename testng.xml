@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestSeleniumGrid" parallel="tests" thread-count="5">
+<suite name="TestSelenideTest" parallel="tests" thread-count="5">
 
     <test name="ChromeTest" verbose="1" parallel="true">
         <parameter name="browserName" value="chrome"></parameter>
         <parameter name="browserVersion" value=""></parameter>
         <classes>
-            <class name="GoogleTests.GoogleTestGrid"></class>
+            <!--<class name="GoogleTests.GoogleTestGrid"></class>-->
+            <class name="GoogleTests.GoogleSelenideTest"></class>
         </classes>
     </test>
-    <test name="FirefoxTest" verbose="1" parallel="true">
+    <test name="GoogleChromeTest" verbose="1" parallel="true">
+        <parameter name="browserName" value="chrome"></parameter>
+        <parameter name="browserVersion" value=""></parameter>
+        <classes>
+            <class name="GoogleTests.GoogleTest"></class>
+        </classes>
+    </test>
+  <!--  <test name="FirefoxTest" verbose="1" parallel="true">
         <parameter name="browserName" value="firefox"></parameter>
         <parameter name="browserVersion" value=""></parameter>
         <classes>
             <class name="GoogleTests.GoogleTestGrid"></class>
         </classes>
-    </test>
+    </test>-->
 
 </suite>

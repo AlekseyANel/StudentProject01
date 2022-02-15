@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 //Конкретный Гуугл-класс для работы с конкретной Гуугл-сраницей
 public class GooglePage extends ParentPage{
 
-    @FindBy(xpath = "//img[@class='lnXdpd']")
+    @FindBy(xpath = "//title[contains(text(),'Google')]")////img[@class='lnXdpd']")
     private WebElement imagePageGoogle;
     @FindBy(xpath = "//input[@class='gLFyf gsfi']")
     private WebElement inputSearch;

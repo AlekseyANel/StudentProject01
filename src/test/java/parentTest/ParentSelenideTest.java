@@ -2,11 +2,11 @@ package parentTest;
 
 import Pages.GooglePageSelenide;
 import com.codeborne.selenide.WebDriverRunner;
-import org.junit.After;
-import org.junit.Before;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,9 +20,9 @@ public class ParentSelenideTest {
 
     public ParentSelenideTest() {
     }
-
-    @Before
-    public void setUp() {
+    @Parameters("browser")
+    @BeforeClass
+    public void setUp() { //@Optional("chrome") String browser
         //немного оптимизуруем наш Хром
         ChromeOptions options = new ChromeOptions();
         //Подтверждения во всплывающих окнах  (пр: геоданные, микрофон ...
@@ -38,7 +38,7 @@ public class ParentSelenideTest {
         googlePageSelenide = new GooglePageSelenide();//без ведрайвера для селенид
 
     }
-    @After
+    @AfterClass
     public void tearDown() {
         //закрывает браузер селенидом и его вебраннером, а не селениум-вебДрайвером webDriver.quit();
         //        //webDriver.quit();
